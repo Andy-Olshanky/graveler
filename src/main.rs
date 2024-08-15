@@ -31,6 +31,11 @@ fn main() {
             let mut rng = StdRand::seed(seed);
 
             while should_stop.load(Relaxed) == 0 {
+                if total_rolls.load(Relaxed) >= max_rolls {
+                    should_stop.store(1, Relaxed);
+                    break;
+                }
+                
                 let mut num_0s = 0;
                 for _ in 0..231 {
                     let num = rng.next_u16() % 4;
@@ -48,11 +53,6 @@ fn main() {
                         should_stop.store(1, Relaxed);
                         break;
                     }
-                }
-
-                if total_rolls.load(Relaxed) >= max_rolls {
-                    should_stop.store(1, Relaxed);
-                    break;
                 }
             }
         });
