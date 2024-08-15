@@ -10,3 +10,11 @@ My CPU has 32 threads so my efficiency peaked at that number of parallel process
 
 ## Result
 My fastest simulation took 18.736 seconds to execute 1 billion simulations
+
+To run for yourself, install Rust and run the following commands:
+```
+git clone https://github.com/Andy-Olshanky/graveler.git
+cd graveler
+cargo build --release
+./target/release/graveler
+```
