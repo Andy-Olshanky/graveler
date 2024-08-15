@@ -9,7 +9,7 @@ I am using Rust and my CPU is a Ryzen 9 7950X3D with 32GB DDR5 RAM, let's see wh
 My CPU has 32 threads so my efficiency peaked at that number of parallel processes, so that's how many threads I created in this program
 
 ## Result
-My fastest simulation took 18.736 seconds to execute 1 billion simulations
+My fastest simulation took 18.60799 seconds to execute 1 billion simulations
 
 To run for yourself, install Rust and run the following commands:
 ```
